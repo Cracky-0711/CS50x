@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Add task{% endblock %}
+{% block body %}
+    <h1>Add new task</h1>
+    <form method="post">
+        <label for="title">Task name:</label>
+        <input type="text" name="title" required><br>
+        <label for="deadline">Deadline:</label>
+        <input type="date" name="deadline" required><br>
+        <button type="submit">Add</button>
+        <a class="white_botton" href="{{ url_for('index') }}">Back</a>
+    </form>
+    
+{% endblock %}
+

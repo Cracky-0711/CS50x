@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+{% block body %}
+    <h1>Signup</h1>
+    <form method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        <div class="error-message">
+            {% if error %}
+                {{ error }}
+            {% endif %}
+        </div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        <button type="submit">Signup</button>
+    </form>
+    <a class="white_botton" href="{{ url_for('login') }}">Login</a>
+{% endblock %}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Home{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+    <body>
+        <div class="top-image-area">
+            <h1>Task Management Tool</h1>
+        </div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('base') }}">TopPage</a></li>
+                    <li><a href="{{ url_for('index') }}">Task List</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="main">
+            {% block body %}
+                <h1>How to use this tool</h1>
+                <p>This is a web application to manage tasks. You can add, edit, delete tasks and magage deadlines.</p>
+                <p>Here is how to use this web application:</p>
+                <ol class="discription">
+                    <li>Register an account from the Login menu in the header menu.</li>
+                    <div class="image-area">
+                        <img src="/static/images/signup1.png" alt="signup1">
+                        <br>
+                        <img src="/static/images/signup2.png" alt="signup2">
+                        <br>
+                        <img src="/static/images/signup3.png" alt="signup3">
+                    </div>
+                    <li>Log in with your registered user name and password, and go to the page of task list.</li>
+                    <div class="image-area">
+                        <img src="/static/images/login1.png" alt="login">
+                    </div>
+                    <li>Click on "Add task" to add a new task.</li>
+                    <div class="image-area">
+                        <img src="/static/images/addtask1.png" alt="addtask1">
+                        <img src="/static/images/addtask2.png" alt="addtask2">
+                    </div>
+                    <li>You can filter the tasks displayed by using the checkboxes in the "Display" section.</li>
+                    <div class="image-area">
+                        <img src="/static/images/filters1.png" alt="filters1">
+                        <img src="/static/images/filters2.png" alt="filters2">
+                    </div>
+                    <li>You can edit the status and deadline of a task, or delete a task by clicking on the hamburger button to the right of each task.</li>
+                    <div class="image-area">
+                        <p style="margin-bottom:0px">Edit</p>
+                        <img style="margin-top:0px" src="/static/images/edit1.png" alt="edit1">
+                        <img src="/static/images/edit2.png" alt="edit3">
+                        <img src="/static/images/edit3.png" alt="edit3">
+                        <p style="margin-bottom:0px">Delete</p>
+                        <img style="margin-top:0px" src="/static/images/edit1.png" alt="delete1">
+                        <img src="/static/images/delete.png" alt="delete2">
+                    </div>
+                    <li>If you log out, you can hide the task list until you log in again.</li>
+                    <div class="image-area">
+                        <img src="/static/images/logout.png" alt="logout">
+                    </div>
+                </ol>
+            {% endblock %}
+        </div>
+    </body>
+    <footer>
+        &copy; 2023 Cracky-0711
+    </footer>
+</html>
+

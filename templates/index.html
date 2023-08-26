@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Task list{% endblock %}
+{% block body %}
+    <h1>Task List </h1>
+    <div class="top">
+        <h2>Filters</h2>
+        <label><input type="checkbox" id="showUncompleted" checked>Incomplete </label>
+        <label><input type="checkbox" id="showInProgress" checked>In Progress</label>
+        <label><input type="checkbox" id="showCompleted" checked>Completed</label>
+    </div>
+    <div class="big">
+        <ul>
+        <p>Task name / Deadline - Condition</p>
+        {% for task in tasks %}
+            <li class="task {{ task.status }}">
+                <div class="task-information">
+                    <span class="task-title">{{ task.title }} /</span>
+                    <span class="task-deadline"> {{ task.deadline }} - </span>
+                    <span class="task-status">{{ task.status }}</span>
+                </div>
+                <div class="task-actions">
+                    <button class="menu-btn">&#9776;</button>
+                    <div class="menu-content">
+                        <a href="{{ url_for('edit_task', task_id=task.id) }}">Edit</a>
+                        <form class="menu-delete" method="post" name="form{{ task.id }}" action="{{ url_for('delete_task', task_id=task.id) }}">
+                            <a href="javascript:form{{ task.id }}.submit()">Delete</a>
+                        </form>
+                    </div>
+                </div>
+                
+            </li>
+        {% endfor %}
+        </ul>
+        <a class="white_botton" href="{{ url_for('add_task') }}">Add task</a>
+        <a class="white_botton" href="{{ url_for('logout') }}">Logout</a>
+    </div>
+{% endblock %}

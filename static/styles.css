@@ -1,0 +1,247 @@
+/* style.css */
+header{
+  z-index: 10;
+  height: 64px;
+  position: absolute;
+  top: 150px;
+  background-color: #333;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+header ul {
+  overflow:hidden;
+  list-style:none;
+  margin: 0 auto;
+  z-index: 20;
+}
+
+header ul li{
+  display: inline-block;
+  padding: 26px 10px 20px 10px;
+}
+
+header a {
+  color:white;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+div.main {
+  margin-top:100px;
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom:20px;
+  width:1000px;
+}
+
+div.top{
+  display: flex;
+  font-size : 15px;
+}
+
+.top label{
+  margin-left:20px;
+  margin-top:5px;
+}
+
+.top h2{
+  font-size:17px;
+  margin-top:0px;
+}
+
+.top-image-area{
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-image: url("/static/images/books.jpg");
+}
+
+.top-image-area h1{
+  font-size: 35px;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 60px;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1px #555555;
+}
+
+.image-area img{
+  height:200px;
+  margin-top:20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.discription li{
+  margin-top:40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-top:10px;
+    margin-right:10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top:0px;
+}
+
+.big p{
+  margin-top:0px;
+  margin-bottom: 5px;
+}
+
+
+.task {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.task-actions {
+    position: relative;
+    margin: 0 0 0 auto;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.menu-btn:hover + .menu-content {
+    display: block;
+}
+
+.menu-content a, .menu-content form {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu-content a:hover {
+    background-color: #ddd;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    margin-top:5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form.menu-delete {
+  padding:0px;
+  margin:0px;
+}
+
+.white_botton {
+  background-color: #cbced1;
+  color: #000000;
+  border: none;
+  padding: 5px 10px;
+  margin-top:10px;
+  margin-right:10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task.incomplete {
+  background-color: rgb(255, 255, 188);
+}
+
+.task.inprogress {
+  background-color: rgb(210, 210, 247);
+}
+
+.task.completed {
+  background-color: rgb(196, 247, 196);
+}
+
+.alert {
+  color:red;
+  margin:0px;
+  font-size:13px;
+}
+
+.error-message {
+  color:red;
+  font-size:13px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+  color: #555;
+  font-size: 14px;
+}

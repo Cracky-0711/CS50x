@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Edit Task{% endblock %}
+{% block body %}
+    <h1>Edit task</h1>
+    <form method="post">
+        <label for="title">Task name:</label>
+        <input type="text" name="title" value="{{ task.title }}" required><br>
+        <label for="deadline">Deadline:</label>
+        <input type="date" name="deadline" value="{{ task.deadline }}" required><br>
+        <label for="status">Condition:</label>
+        <select name="status" required>
+            <option value="incomplete" {% if task.status == 'incomplete' %}selected{% endif %}>Incomplete</option>
+            <option value="inprogress" {% if task.status == 'inprogress' %}selected{% endif %}>In progress</option>
+            <option value="completed" {% if task.status == 'completed' %}selected{% endif %}>Completed</option>
+        </select><br>
+        <button type="submit">Save changes</button>
+        <a class="white_botton" href="{{ url_for('index') }}">Back</a>
+    </form>
+{% endblock %}
+    
